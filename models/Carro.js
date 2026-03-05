@@ -7,12 +7,18 @@ class Obj{
         this.a = a
     }
 
+    des_carro(){
+        let img = new Image()
+        img.src = this.a
+        des.drawImage(img, this.x, this.y, this.w, this.h)
+    }
+
     des_quad(){
         des.fillStyle = this.a
         des.fillRect(this.x, this.y, this.w, this.h,this.a)
     }
 
-    des_carro() {
+    des_carro_manual() {
         // Roda dianteira esquerda (agora superior frente)
         des.beginPath()
         des.lineWidth = '5'
@@ -64,7 +70,7 @@ class Obj{
         des.rect(this.x + 70, this.y - 50, 10, 50)
         des.stroke()
         des.fill()
-    }
+    }    
 }
 
 class Carro extends Obj{

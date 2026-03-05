@@ -1,13 +1,13 @@
 let des = document.getElementById('des').getContext('2d')
 
-let carroInimigo = new CarroInimigo(1300,325,50,50,'darkgreen')
+let carroInimigo = new CarroInimigo(1300,325,80,50,'./img/carro_02_bg.png')
 let carroInimigo2 = new CarroInimigo(1500,125,50,50,'rgb(247, 0, 255)')
 let carroInimigo3 = new CarroInimigo(1700,400,50,50,'rgb(255, 238, 0)')
 let estrada = new Estrada(10,345,40,10,'white')
 let estrada2 = new Estrada(80,345,40,10,'white')
 let estrada3 = new Estrada(140,345,40,10,'white')
-let carro = new Carro(100,325,50,50,'darkblue')
-let medidaCarro = new Carro(100, 325, 85, 60, 'green')
+let carro = new Carro(100,325,80,50,'./img/carro_01_bg.png')
+// let medidaCarro = new Carro(100, 325, 85, 60, 'green')
 
 document.addEventListener('keydown', (e)=>{
     if(e.key === 'w' || e.key === 'ArrowUp'){
@@ -64,7 +64,7 @@ function desenha(){
     // carroInimigo2.des_carro()
     // carroInimigo3.des_carro()
     carro.des_carro()
-    medidaCarro.des_quad()    
+    // medidaCarro.des_quad()    
 }
 
 function atualiza(){

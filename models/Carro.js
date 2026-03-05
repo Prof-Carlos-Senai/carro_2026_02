@@ -71,6 +71,7 @@ class Carro extends Obj{
 
     dir = 0
     vida = 5
+    pontos = 0
 
     mov_car(){
         this.y += this.dir
@@ -92,6 +93,14 @@ class Carro extends Obj{
         }
     }
 
+    point(objeto){
+        if(objeto.x <= -100){
+            return true
+        }else{
+            return false
+        }
+    }
+
 
     
 }
@@ -105,7 +114,7 @@ class CarroInimigo extends Obj{
 
     mov_car(){
         this.x -= 4
-        if(this.x < - 100){            
+        if(this.x <= - 200){            
             this.recomeca()         
         }
     }

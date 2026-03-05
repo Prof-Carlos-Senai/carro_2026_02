@@ -39,11 +39,21 @@ function colisao(){
         carroInimigo3.recomeca()
         carro.vida -= 1
     }
-    console.log(carro.vida)
+    console.log('vida: ',carro.vida)
 }
 
 function pontuacao(){
-    
+    console.log('pos: ', carroInimigo.x)
+    if(carro.point(carroInimigo)){
+        carro.pontos += 5        
+    }
+    // if(carro.point(carroInimigo2)){
+    //     carro.pontos += 5
+    // }
+    // if(carro.point(carroInimigo3)){
+    //     carro.pontos += 5
+    // }
+    console.log('pontos: ',carro.pontos)
 }
 
 function desenha(){
@@ -51,8 +61,8 @@ function desenha(){
     // estrada2.des_quad()
     // estrada3.des_quad()
     carroInimigo.des_carro()
-    carroInimigo2.des_carro()
-    carroInimigo3.des_carro()
+    // carroInimigo2.des_carro()
+    // carroInimigo3.des_carro()
     carro.des_carro()
     medidaCarro.des_quad()    
 }
@@ -60,8 +70,8 @@ function desenha(){
 function atualiza(){
     carro.mov_car()
     carroInimigo.mov_car()
-    carroInimigo2.mov_car()
-    carroInimigo3.mov_car()
+    // carroInimigo2.mov_car()
+    // carroInimigo3.mov_car()
     // estrada.mov_est()
     // estrada2.mov_est()
     // estrada3.mov_est()

@@ -119,7 +119,7 @@ class CarroInimigo extends Obj{
     }
 
     mov_car(){
-        this.x -= 4
+        this.x -= 16
         if(this.x <= - 200){            
             this.recomeca()         
         }

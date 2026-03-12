@@ -57,9 +57,9 @@ function pontuacao(){
 }
 
 function desenha(){
-    // estrada.des_quad()
-    // estrada2.des_quad()
-    // estrada3.des_quad()
+    estrada.des_quad()
+    estrada2.des_quad()
+    estrada3.des_quad()
     carroInimigo.des_carro()
     // carroInimigo2.des_carro()
     // carroInimigo3.des_carro()
@@ -72,9 +72,9 @@ function atualiza(){
     carroInimigo.mov_car()
     // carroInimigo2.mov_car()
     // carroInimigo3.mov_car()
-    // estrada.mov_est()
-    // estrada2.mov_est()
-    // estrada3.mov_est()
+    estrada.mov_est()
+    estrada2.mov_est()
+    estrada3.mov_est()
     colisao()
     pontuacao()
 

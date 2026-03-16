@@ -78,6 +78,8 @@ class Carro extends Obj{
     dir = 0
     vida = 5
     pontos = 0
+    frame = 1
+    tempo = 0
 
     mov_car(){
         this.y += this.dir
@@ -107,11 +109,26 @@ class Carro extends Obj{
         }
     }
 
+    anim(nome){
+        this.tempo +=1
+        if(this.tempo > 12){
+            this.tempo = 0
+            this.frame +=1
+        }
+        if(this.frame>4){
+            this.frame=1
+        }
+        //carro_001_bg
+        this.a = "./img/"+nome+this.frame+"_bg.png"
+    }
+
 
     
 }
 
 class CarroInimigo extends Obj{
+
+    vel = 2
 
     recomeca(){
         this.x = 1300
@@ -119,7 +136,7 @@ class CarroInimigo extends Obj{
     }
 
     mov_car(){
-        this.x -= 16
+        this.x -= this.vel
         if(this.x <= - 200){            
             this.recomeca()         
         }
@@ -132,5 +149,14 @@ class Estrada extends Obj{
         if(this.x < - 60){
             this.x = 1300
         }        
+    }
+}
+
+class Text{
+    des_text(text,x,y,cor,font){
+        des.fillStyle = cor
+        des.lineWidth = '5'
+        des.font = font
+        des.fillText(text,x,y)
     }
 }
